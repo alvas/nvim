@@ -10,7 +10,7 @@ apt-get install neovim
 
 Use the following command to install nvim config file and plugin:
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/alvas/nvim.git ~/.config/nvim/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim<br />
+git clone https://github.com/alvas/nvim.git ~/.config/nvim/<br />
 nvim +PluginInstall +qall
 
