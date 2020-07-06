@@ -282,6 +282,7 @@ set enc=utf-8
 
 " vertical terminal
 " split | terminal<CR>
+" or vs | te
 " enter normal mode in terminal to scroll screen
 " <C-\><C-N>
 
