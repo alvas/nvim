@@ -232,6 +232,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'Yggdroot/indentLine'
 Plugin '907th/vim-auto-save'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -292,3 +293,8 @@ set enc=utf-8
 
 " enable autosave  on vim startup
 let g:auto_save = 1 
+let g:tex_flavor = 'latex'
+
+" Add documentation
+nmap <silent> <leader>d :Dox<cr>
+
