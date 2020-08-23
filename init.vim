@@ -231,8 +231,11 @@ Plugin 'gilligan/vim-lldb'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'Yggdroot/indentLine'
 Plugin '907th/vim-auto-save'
-Plugin 'gabrielelana/vim-markdown'
+" Plugin 'gabrielelana/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
