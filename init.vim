@@ -237,7 +237,7 @@ Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'craigemery/vim-autotag'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 "
 " " All of your Plugins must be added before the following line
@@ -408,5 +408,8 @@ filetype plugin on
 "let g:instant_markdown_port = 8888
 "let g:instant_markdown_python = 1
 
+" header file location
 set path=.,/usr/include/**,/usr/src/linux/**
-let g:coc_node_path = '/usr/bin/node'
+
+" Coc doesn't work because nodejs segment fault
+" let g:coc_node_path = '/usr/bin/node'
