@@ -236,6 +236,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'craigemery/vim-autotag'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 "
 " " All of your Plugins must be added before the following line
@@ -394,8 +396,9 @@ let g:mkdp_page_title = '「${name}」'
 " vim-instant-markdown
 "Uncomment to override defaults:
 filetype plugin on
+"let g:instant_markdown_browser = "firefox --new-window"
 "let g:instant_markdown_slow = 1
-"let g:instant_markdown_autostart = 0
+"let g:instant_markdown_autostart = 1
 "let g:instant_markdown_open_to_the_world = 1
 "let g:instant_markdown_allow_unsafe_content = 1
 "let g:instant_markdown_allow_external_content = 0
@@ -405,3 +408,5 @@ filetype plugin on
 "let g:instant_markdown_port = 8888
 "let g:instant_markdown_python = 1
 
+set path=.,/usr/include/**,/usr/src/linux/**
+let g:coc_node_path = '/usr/bin/node'
