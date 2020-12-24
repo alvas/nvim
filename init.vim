@@ -409,7 +409,7 @@ filetype plugin on
 "let g:instant_markdown_python = 1
 
 " header file location
-set path=.,/usr/include/**,/usr/src/linux/**
+set path=$PWD/**,/usr/include/**,/usr/src/linux/**
 
 " Coc doesn't work because nodejs segment fault
 " let g:coc_node_path = '/usr/bin/node'
