@@ -81,9 +81,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "change <leader> from '\' to ','
 let mapleader = ","
 
+nmap <silent> <leader>jj :NERDTree .<CR>
 nmap <silent> <leader>hh :NERDTreeToggle<CR>
 nmap <silent> <leader>ll :TagbarToggle<CR>
-map <silent> <leader>mm :MBEToggle<CR>
+nmap <silent> <leader>mm :MBEToggle<CR>
+nmap <silent> <leader>nt :tabnew<CR>
+nmap <silent> <leader>tt :terminal<CR>
 
 " search
 map <silent> <leader>ss :CtrlSF<CR>
