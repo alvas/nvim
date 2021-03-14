@@ -84,7 +84,7 @@ let mapleader = ","
 nmap <silent> <leader>jj :NERDTree .<CR>
 nmap <silent> <leader>hh :NERDTreeToggle<CR>
 nmap <silent> <leader>ll :TagbarToggle<CR>
-nmap <silent> <leader>mm :MBEToggle<CR>
+" nmap <silent> <leader>mm :MBEToggle<CR>
 nmap <silent> <leader>nt :tabnew<CR>
 nmap <silent> <leader>tt :terminal<CR>
 
@@ -138,6 +138,13 @@ nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+
+" buffer explorer
+" normal open: <silent> <leader>be 
+" toggle open/close: <silent> <leader>bt 
+" force horizontal split : <silent> <leader>bs 
+" force vertical split : <silent> <leader>bv 
+"
 " nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 
@@ -180,9 +187,10 @@ Plugin 'Mizuchi/STL-Syntax.git'
 "Plugin 'bling/vim-airline'
 "Plugin 'bling/vim-bufferline'
 Plugin 'christoomey/vim-tmux-navigator'
-" <c-p> in find file mode
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'fholgado/minibufexpl.vim'
+Plugin 'vim-airline/vim-airline'
+" Plugin 'fholgado/mjlanzarotta
+Plugin 'jlanzarotta/bufexplorer'
 Plugin 'flazz/vim-colorschemes'
 "Plugin 'garbas/vim-snipmate'
 "Plugin 'gcmt/wildfire.vim'
