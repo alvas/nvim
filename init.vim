@@ -134,7 +134,7 @@ nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " cscope quickfix
 set cscopequickfix=c-,d-,e-,g-,i-,s-,t-
 nnoremap <silent> <leader>co :copen<cr>
-nnoremap <silent> <leader>ccl :cclose<cr>
+nnoremap <silent> <leader>cl :cclose<cr>
 
 " TMUX
 let g:tmux_navigator_no_mappings = 1
