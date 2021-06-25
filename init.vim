@@ -253,6 +253,10 @@ Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'craigemery/vim-autotag'
+Plugin 'ervandew/supertab'
+Plugin 'luochen1990/rainbow'
+Plugin 'junegunn/fzf.vim'
+
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 "
