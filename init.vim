@@ -15,7 +15,8 @@ set ts=4
 set spelllang=en_us
 
 " colorscheme elflord
-colorscheme desert
+" colorscheme desert
+colorscheme peachpuff
 
 
 filetype on
@@ -193,7 +194,7 @@ Plugin 'Mizuchi/STL-Syntax.git'
 "Plugin 'bling/vim-bufferline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline'
 " Plugin 'fholgado/mjlanzarotta
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'flazz/vim-colorschemes'
@@ -255,6 +256,8 @@ Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'craigemery/vim-autotag'
 Plugin 'ervandew/supertab'
 Plugin 'luochen1990/rainbow'
+" Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
