@@ -15,7 +15,8 @@ set ts=4
 set spelllang=en_us
 
 " colorscheme elflord
-colorscheme desert
+" colorscheme desert
+colorscheme peachpuff
 
 
 filetype on
