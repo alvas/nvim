@@ -86,6 +86,9 @@ nmap <silent> <leader>j :NERDTree .<CR>
 nmap <silent> <leader>h :NERDTreeToggle<CR>
 nmap <silent> <leader>m :OpenBookmark 
 nmap <silent> <leader>l :TagbarToggle<CR>
+" select the current editing file node in NERDTree
+nmap <silent> <leader>r :NERDTreeFind<CR>
+
 " nmap <silent> <leader>mm :MBEToggle<CR>
 nmap <silent> <leader>nt :tabnew<CR>
 nmap <silent> <leader>tt :terminal<CR>
@@ -135,7 +138,7 @@ nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " cscope quickfix
 set cscopequickfix=c-,d-,e-,g-,i-,s-,t-
 nnoremap <silent> <leader>co :copen<cr>
-nnoremap <silent> <leader>ccl :cclose<cr>
+nnoremap <silent> <leader>cx :cclose<cr>
 
 " TMUX
 let g:tmux_navigator_no_mappings = 1
