@@ -14,3 +14,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim<b
 git clone https://github.com/alvas/nvim.git ~/.config/nvim/<br />
 nvim +PluginInstall +qall
 
+
+To index files in /usr/src and /usr/include folder for cscope:
+$find /usr/src/ -type f ! -type l \( -iname \*.h -o -iname \*.c -o -iname \*.cpp -o -iname \*.cc -o -iname \*.S \) >  cscope.files
+$find /usr/include -type f ! -type l \( -iname \*.h -o -iname \*.c -o -iname \*.cpp \) >>  cscope.files
+$cscope -Rbqk
+
