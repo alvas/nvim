@@ -119,6 +119,8 @@ nmap <silent> <leader>lw :LUWalk<cr>
 "vim configuration shortcut
 nnoremap <silent> <leader>cf :vsplit $MYVIMRC<cr>
 nnoremap <silent> <leader>sf :source $MYVIMRC<cr>
+nnoremap <silent> <leader>mks :mks! session.vim<cr>
+nnoremap <silent> <leader>lds :source session.vim<cr>
 
 "insert current date and time
 "nmap <silent> <leader>dd :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<cr>
@@ -126,7 +128,7 @@ nmap <silent> <leader>dd :r !date "+\%Y-\%m-\%d"<cr>
 
 " cscope
 " nmap <silent> <leader>c :!cscope -bcqR<cr>
-nmap <silent> <leader>a :cs add cscope.out<cr>
+nmap <silent> <leader>a :cd ~/workdir \| cs add cscope.out<cr>
 nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -231,8 +233,8 @@ Plugin 'spf13/vim-colors'
 "Plugin 'tpope/vim-repeat'
 "Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/a.vim'
-"Plugin 'vim-scripts/restore_view.vim'
-"Plugin 'vim-scripts/sessionman.vim'
+" Plugin 'vim-scripts/restore_view.vim'
+" Plugin 'vim-scripts/sessionman.vim'
 Plugin 'yegappan/grep.git'
 Plugin 'yegappan/greplace'
 Plugin 'majutsushi/tagbar'
@@ -262,6 +264,9 @@ Plugin 'luochen1990/rainbow'
 " Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
+" Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -442,3 +447,43 @@ set path=$PWD/**,/usr/include/**,/usr/src/linux/**
 "
 
 let g:rainbow_active = 1
+
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
+
+    let g:lsp_format_sync_timeout = 1000
+    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+    
+    " refer to doc to add more commands
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+
