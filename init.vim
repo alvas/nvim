@@ -128,7 +128,7 @@ nmap <silent> <leader>dd :r !date "+\%Y-\%m-\%d"<cr>
 
 " cscope
 " nmap <silent> <leader>c :!cscope -bcqR<cr>
-nmap <silent> <leader>a :cd ~/workdir \| cs add cscope.out<cr>
+nmap <silent> <leader>a :cs add ~/workdir/cscope.out<cr>
 nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
