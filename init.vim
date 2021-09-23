@@ -266,6 +266,8 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'mattn/vim-lsp-settings'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+
 " Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
@@ -487,3 +489,5 @@ augroup lsp_install
 augroup END
 
 
+" relative hybrid number toggle on/off
+nmap <silent> <leader>nu :set nu! rnu!<cr>
