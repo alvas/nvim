@@ -85,6 +85,8 @@ let mapleader = ","
 nmap <silent> <leader>j :NERDTree .<CR>
 nmap <silent> <leader>h :NERDTreeToggle<CR>
 nmap <silent> <leader>m :OpenBookmark 
+nmap <silent> <leader>bm :Bookmark<CR>
+nmap <silent> <leader>dm :ClearBookmarks<CR>
 nmap <silent> <leader>l :TagbarToggle<CR>
 " select the current editing file node in NERDTree
 nmap <silent> <leader>r :NERDTreeFind<CR>
