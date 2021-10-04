@@ -130,7 +130,8 @@ nmap <silent> <leader>dd :r !date "+\%Y-\%m-\%d"<cr>
 
 " cscope
 " nmap <silent> <leader>c :!cscope -bcqR<cr>
-nmap <silent> <leader>a :cs add ~/workdir/cscope.out<cr>
+nmap <silent> <leader>dbg :cs add ~/workdir/cscope.out<cr>
+nmap <silent> <leader>dbl :cs add ./cscope.out<cr>
 nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -307,6 +308,8 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <leader>{ viw<esc>a}<esc>hbi{<esc>lel
 nnoremap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
 nnoremap <leader>( viw<esc>a)<esc>hbi(<esc>lel
+nnoremap <leader>p "+p
+nnoremap <leader>y "+y
 
 nnoremap <leader>json :%!python -m json.tool<CR>
 
