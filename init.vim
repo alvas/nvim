@@ -500,7 +500,7 @@ augroup END
 nmap <silent> <leader>nu :set nu! rnu!<cr>
 
 " vim-dispatch
+nnoremap <silent> <leader>mk :Dispatch! make
 nnoremap <silent> <leader>mo :Copen<cr>
-nnoremap <silent> <leader>m :Dispatch! make
 nnoremap <silent> <leader>r :Dispatch!
 
