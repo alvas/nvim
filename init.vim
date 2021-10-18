@@ -142,7 +142,7 @@ nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " cscope quickfix
 set cscopequickfix=c-,d-,e-,g-,i-,s-,t-
-nnoremap <silent> <leader>co :copen<cr>
+nnoremap <silent> <leader>co :copen<cr> <bar>
 nnoremap <silent> <leader>cx :cclose<cr>
 
 " TMUX
@@ -243,7 +243,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'kshenoy/vim-signature'
 Plugin 'dyng/ctrlsf.vim'
-" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'ycm-core/YouCompleteMe'
 " :TemplateHere *.leetcode 
 Plugin 'git://github.com/aperezdc/vim-template.git'
 " :DirDiff dir1 dir2
@@ -274,6 +274,8 @@ Plugin 'junegunn/fzf.vim'
 " Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plugin 'tpope/vim-dispatch'
 
 "
 " " All of your Plugins must be added before the following line
@@ -496,3 +498,9 @@ augroup END
 
 " relative hybrid number toggle on/off
 nmap <silent> <leader>nu :set nu! rnu!<cr>
+
+" vim-dispatch
+nnoremap <silent> <leader>mo :Copen<cr>
+nnoremap <silent> <leader>m :Dispatch! make
+nnoremap <silent> <leader>r :Dispatch!
+
