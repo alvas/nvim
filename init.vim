@@ -82,12 +82,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "change <leader> from '\' to ','
 let mapleader = ","
 
-nmap <silent> <leader>j :NERDTree .<CR>
-nmap <silent> <leader>h :NERDTreeToggle<CR>
-nmap <silent> <leader>m :OpenBookmark 
+nmap <silent> <leader>jj :NERDTree .<CR>
+nmap <silent> <leader>hh :NERDTreeToggle<CR>
+nmap <silent> <leader>mm :OpenBookmark 
 nmap <silent> <leader>bm :Bookmark<CR>
 nmap <silent> <leader>dm :ClearBookmarks<CR>
-nmap <silent> <leader>l :TagbarToggle<CR>
+nmap <silent> <leader>ll :TagbarToggle<CR>
 " select the current editing file node in NERDTree
 nmap <silent> <leader>r :NERDTreeFind<CR>
 
