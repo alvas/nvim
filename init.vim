@@ -505,4 +505,5 @@ nnoremap <silent> <leader>mo :Copen<cr>
 nnoremap <silent> <leader>r :Dispatch!
 
 " open man page; shortcut: <leader>K
+" or use :Man 3 printf
 runtime! ftpplugin/man.vim
