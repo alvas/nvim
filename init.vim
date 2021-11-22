@@ -276,6 +276,7 @@ Plugin 'junegunn/fzf.vim'
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plugin 'tpope/vim-dispatch'
+Plugin 'vimwiki/vimwiki'
 
 "
 " " All of your Plugins must be added before the following line
@@ -507,3 +508,11 @@ nnoremap <silent> <leader>r :Dispatch!
 " open man page; shortcut: <leader>K
 " or use :Man 3 printf
 runtime! ftpplugin/man.vim
+
+
+" vimwiki
+set nocompatible
+filetype plugin on
+syntax on
+
+
