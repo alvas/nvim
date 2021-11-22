@@ -511,6 +511,17 @@ runtime! ftpplugin/man.vim
 
 
 " vimwiki
+" <leader>ww open default wiki index file
+" <leader>wt open default wiki index file in a new tab
+" <leader>ws select and open wiki index file
+" <leader>wd delete wiki fiel you are in
+" <leader>wr rename wiki file you are in
+" <Enter> folow/create wiki link
+" <Shift-Enter> split and follow/create wiki link 
+" <Ctrl-Enter> vertical split and follow/create wiki link
+" <Backspace> go back to parent(previous) wiki link
+" <Tab> find next wiki link
+" <Shift-Tab> find preivous wiki link
 set nocompatible
 filetype plugin on
 syntax on
