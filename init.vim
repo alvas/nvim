@@ -277,6 +277,8 @@ Plugin 'junegunn/fzf.vim'
 
 Plugin 'tpope/vim-dispatch'
 Plugin 'vimwiki/vimwiki'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 "
 " " All of your Plugins must be added before the following line
@@ -525,5 +527,8 @@ runtime! ftpplugin/man.vim
 set nocompatible
 filetype plugin on
 syntax on
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 
