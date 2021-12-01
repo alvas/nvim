@@ -89,7 +89,7 @@ nmap <silent> <leader>bm :Bookmark<CR>
 nmap <silent> <leader>dm :ClearBookmarks<CR>
 nmap <silent> <leader>ll :TagbarToggle<CR>
 " select the current editing file node in NERDTree
-nmap <silent> <leader>r :NERDTreeFind<CR>
+nmap <silent> <leader>rr :NERDTreeFind<CR>
 
 " nmap <silent> <leader>mm :MBEToggle<CR>
 nmap <silent> <leader>nt :tabnew<CR>
@@ -505,7 +505,7 @@ nmap <silent> <leader>nu :set nu! rnu!<cr>
 " vim-dispatch
 nnoremap <silent> <leader>mk :Dispatch! make
 nnoremap <silent> <leader>mo :Copen<cr>
-nnoremap <silent> <leader>r :Dispatch!
+nnoremap <silent> <leader>dp :Dispatch!
 
 " open man page; shortcut: <leader>K
 " or use :Man 3 printf
