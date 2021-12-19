@@ -14,10 +14,6 @@ set softtabstop=4
 set ts=4
 set spelllang=en_us
 
-" colorscheme elflord
-" colorscheme desert
-colorscheme peachpuff
-
 
 filetype on
 filetype plugin on
@@ -504,7 +500,7 @@ nmap <silent> <leader>nu :set nu! rnu!<cr>
 
 " vim-dispatch
 nnoremap <silent> <leader>mk :Dispatch! make
-nnoremap <silent> <leader>mo :Copen<cr>
+nnoremap <silent> <leader>do :Copen<cr>
 nnoremap <silent> <leader>dp :Dispatch!
 
 " open man page; shortcut: <leader>K
@@ -531,4 +527,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_markdown_link_ext=1
 
+" colorscheme elflord
+" colorscheme desert
+" colorscheme peachpuff
 
+colorscheme google
