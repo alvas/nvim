@@ -502,6 +502,8 @@ nmap <silent> <leader>nu :set nu! rnu!<cr>
 nnoremap <silent> <leader>mk :Dispatch! make
 nnoremap <silent> <leader>do :Copen<cr>
 nnoremap <silent> <leader>dp :Dispatch!
+nnoremap <silent> <leader>bb :make %<<cr>
+nnoremap <silent> <leader>uu :!./%<<cr>
 
 " open man page; shortcut: <leader>K
 " or use :Man 3 printf
