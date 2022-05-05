@@ -276,6 +276,12 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 
+" ,di to start DrawIt
+" ,ds to stop DrawIt
+" ctrl + v to select visual vertical block
+" R: replace more than one character, until ECS is pressed
+Plugin 'vim-scripts/drawit'
+
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
