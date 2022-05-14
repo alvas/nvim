@@ -543,3 +543,6 @@ colorscheme google
 
 " insert mode forward charater deletion
 inoremap <c-g> <del>
+
+" grep word under cursor in curreent buffer and save output to a file
+nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
