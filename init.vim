@@ -542,4 +542,4 @@ let g:vimwiki_markdown_link_ext=1
 colorscheme google
 
 " insert mode forward charater deletion
-inoremap <c-f> <del>
+inoremap <c-g> <del>
