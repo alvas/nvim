@@ -546,3 +546,8 @@ inoremap <c-g> <del>
 
 " grep word under cursor in curreent buffer and save output to a file
 nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
+
+" toggle on/off buffer modifiable
+" :set nomodifiable, turn off buffer modifiable
+nmap <silent> <leader>ne :set modifiable!<cr>
+
