@@ -551,3 +551,6 @@ nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
 " :set nomodifiable, turn off buffer modifiable
 nmap <silent> <leader>ne :set modifiable!<cr>
 
+" copy current buffer file name to register *
+nmap <silent> <leader>gn :let @*=expand("%")<cr>
+
