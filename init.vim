@@ -276,6 +276,9 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 
+" <leader>ww in one window and <leader>ww in another window would switch them
+Plugin 'wesQ3/vim-windowswap'
+
 " ,di to start DrawIt
 " ,ds to stop DrawIt
 " ctrl + v to select visual vertical block
