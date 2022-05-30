@@ -241,10 +241,10 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'dyng/ctrlsf.vim'
 " Plugin 'ycm-core/YouCompleteMe'
 " :TemplateHere *.leetcode 
-Plugin 'git://github.com/aperezdc/vim-template.git'
+Plugin 'aperezdc/vim-template.git'
 " :DirDiff dir1 dir2
-Plugin 'git://github.com/will133/vim-dirdiff.git'
-Plugin 'git://github.com/alvan/vim-closetag.git'
+Plugin 'will133/vim-dirdiff.git'
+Plugin 'alvan/vim-closetag.git'
 Plugin 'lervag/vimtex'
 Plugin 'vhdirk/vim-cmake'
 " Plugin 'skywind3000/asyncrun.vim'
@@ -275,6 +275,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+" Plugin 'neovim/nvim-lspconfig'
 
 " <leader>ww in one window and <leader>ww in another window would switch them
 Plugin 'wesQ3/vim-windowswap'
@@ -465,43 +466,43 @@ set path=$PWD/**,/usr/include/**,/usr/src/linux/**
 
 let g:rainbow_active = 1
 
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
-endif
-
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gs <plug>(lsp-document-symbol-search)
-    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
-    nmap <buffer> K <plug>(lsp-hover)
-    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
-    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
-
-    let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-    
-    " refer to doc to add more commands
-endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
+"if executable('pyls')
+"    " pip install python-language-server
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'pyls',
+"        \ 'cmd': {server_info->['pyls']},
+"        \ 'allowlist': ['python'],
+"        \ })
+"endif
+"
+"function! s:on_lsp_buffer_enabled() abort
+"    setlocal omnifunc=lsp#complete
+"    setlocal signcolumn=yes
+"    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+"    nmap <buffer> gd <plug>(lsp-definition)
+"    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+"    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+"    nmap <buffer> gr <plug>(lsp-references)
+"    nmap <buffer> gi <plug>(lsp-implementation)
+"    nmap <buffer> gt <plug>(lsp-type-definition)
+"    nmap <buffer> <leader>rn <plug>(lsp-rename)
+"    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+"    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+"    nmap <buffer> K <plug>(lsp-hover)
+"    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
+"    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
+"
+"    let g:lsp_format_sync_timeout = 1000
+"    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+"    
+"    " refer to doc to add more commands
+"endfunction
+"
+"augroup lsp_install
+"    au!
+"    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+"    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+"augroup END
 
 
 " relative hybrid number toggle on/off
@@ -555,5 +556,11 @@ nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
 nmap <silent> <leader>ne :set modifiable!<cr>
 
 " copy current buffer file name to register *
-nmap <silent> <leader>gn :let @*=expand("%")<cr>
+nmap <silent> <leader>fn :let @*=expand("%")<cr>
+
+" shortcut to show buffer #
+nmap <silent> <leader>b# :echo bufnr("%")<cr>
+
+" renamp vimwiki index shortcut to avoid conflict with vim-windowswap
+nmap <silent> leader> wx <Plug>WimwikiIndex
 
