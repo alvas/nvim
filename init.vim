@@ -313,7 +313,7 @@ set clipboard=unnamed
 let g:email='qingyun.oracle@gmail.com'
 let g:ycm_server_python_interpreter='/usr/local/bin/python'
 
-inoremap jk <esc>
+inoremap ,, <esc>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <leader>{ viw<esc>a}<esc>hbi{<esc>lel
@@ -506,7 +506,7 @@ let g:rainbow_active = 1
 
 
 " relative hybrid number toggle on/off
-nmap <silent> <leader>nu :set nu! rnu!<cr>
+nnoremap <silent> <leader>nu :set nu! rnu!<cr>
 
 " vim-dispatch
 nnoremap <silent> <leader>mk :Dispatch! make
@@ -538,6 +538,8 @@ syntax on
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_markdown_link_ext=1
+nnoremap <silent> <leader>nowiki :set filetype=txt<cr>
+nnoremap <silent> <leader>wiki :set filetype=vimwiki<cr>
 
 " colorscheme elflord
 " colorscheme desert
@@ -547,20 +549,25 @@ colorscheme google
 
 " insert mode forward charater deletion
 inoremap <c-g> <del>
+inoremap <c-f> <esc>ldwi
+
+" convert word before cursor to upper/lower case
+inoremap <c-p> <esc>viwUea
+inoremap <c-l> <esc>viwuea
 
 " grep word under cursor in curreent buffer and save output to a file
 nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
 
 " toggle on/off buffer modifiable
 " :set nomodifiable, turn off buffer modifiable
-nmap <silent> <leader>ne :set modifiable!<cr>
+nnoremap <silent> <leader>ne :set modifiable!<cr>
 
 " copy current buffer file name to register *
-nmap <silent> <leader>fn :let @*=expand("%")<cr>
+nnoremap <silent> <leader>fn :let @*=expand("%")<cr>
 
 " shortcut to show buffer #
-nmap <silent> <leader>b# :echo bufnr("%")<cr>
+nnoremap <silent> <leader>b# :echo bufnr("%")<cr>
 
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
-nmap <silent> leader> wx <Plug>WimwikiIndex
+nnoremap <silent> <leader>wx <Plug>VimwikiIndex
 
