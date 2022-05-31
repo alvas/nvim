@@ -538,7 +538,7 @@ syntax on
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_markdown_link_ext=1
-nnoremap <silent> <leader>nowiki :set filetype=txt<cr>
+nnoremap <silent> <leader>txt :set filetype=txt<cr>
 nnoremap <silent> <leader>wiki :set filetype=vimwiki<cr>
 
 " colorscheme elflord
@@ -552,8 +552,8 @@ inoremap <c-g> <del>
 inoremap <c-f> <esc>ldwi
 
 " convert word before cursor to upper/lower case
-inoremap <c-p> <esc>viwUea
-inoremap <c-l> <esc>viwuea
+inoremap <c-p> <esc>mzgUiw`za
+inoremap <c-l> <esc>mzguiw`za
 
 " grep word under cursor in curreent buffer and save output to a file
 nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
