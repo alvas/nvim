@@ -559,7 +559,8 @@ nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
 
 " toggle on/off buffer modifiable
 " :set nomodifiable, turn off buffer modifiable
-nnoremap <silent> <leader>ne :set modifiable!<cr>
+" shortcut to check buffer is modifiable
+nnoremap <silent> <leader>mod :set modifiable!<cr> <bar> :set modifiable?<cr>
 
 " copy current buffer file name to register *
 nnoremap <silent> <leader>fn :let @*=expand("%")<cr>
@@ -570,6 +571,5 @@ nnoremap <silent> <leader># :echo bufnr("%")<cr>
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
 nnoremap <silent> <leader>wx <Plug>VimwikiIndex
 
-" shortcut to check buffer is modifiable
-nnoremap <silent> <leader>mod :set modifiable?<cr>
+nnoremap <silent> <leader>pwd :pwd<cr>
 
