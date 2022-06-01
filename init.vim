@@ -282,7 +282,7 @@ Plugin 'wesQ3/vim-windowswap'
 
 " ,di to start DrawIt
 " ,ds to stop DrawIt
-" ctrl + v to select visual vertical block
+" ctrl + v to select visual vertical block and ,b to draw a box, ,e to draw an eclipse
 " R: replace more than one character, until ECS is pressed
 Plugin 'vim-scripts/drawit'
 
@@ -549,10 +549,12 @@ inoremap <c-g> <del>
 " delete word after cursor in insert mode
 inoremap <C-e> <C-o>de
 
-
 " convert word before cursor to upper/lower case
 inoremap <c-p> <esc>mzgUiw`za
 inoremap <c-l> <esc>mzguiw`za
+
+" shortcut to show buffer #
+nnoremap <silent> <leader># :echo bufnr("%")<cr>
 
 " grep word under cursor in curreent buffer and save output to a file
 nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
@@ -564,9 +566,6 @@ nnoremap <silent> <leader>mod :set modifiable!<cr> <bar> :set modifiable?<cr>
 
 " copy current buffer file name to register *
 nnoremap <silent> <leader>fn :let @*=expand("%")<cr>
-
-" shortcut to show buffer #
-nnoremap <silent> <leader># :echo bufnr("%")<cr>
 
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
 nnoremap <silent> <leader>wx <Plug>VimwikiIndex
