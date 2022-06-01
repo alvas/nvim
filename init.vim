@@ -332,9 +332,6 @@ nnoremap <leader>json :%!python -m json.tool<CR>
 "  au BufWinEnter ?* silent! loadview 1
 " augroup END
 
-" delete word after cursor in insert mode
-inoremap <C-e> <C-o>de
-
 set enc=utf-8
 
 " vertical terminal
@@ -549,7 +546,9 @@ colorscheme google
 
 " insert mode forward charater deletion
 inoremap <c-g> <del>
-inoremap <c-f> <esc>ldwi
+" delete word after cursor in insert mode
+inoremap <C-e> <C-o>de
+
 
 " convert word before cursor to upper/lower case
 inoremap <c-p> <esc>mzgUiw`za
