@@ -566,10 +566,11 @@ nnoremap <silent> <leader>ne :set modifiable!<cr>
 nnoremap <silent> <leader>fn :let @*=expand("%")<cr>
 
 " shortcut to show buffer #
-nnoremap <silent> <leader>b# :echo bufnr("%")<cr>
+nnoremap <silent> <leader># :echo bufnr("%")<cr>
 
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
 nnoremap <silent> <leader>wx <Plug>VimwikiIndex
 
 " shortcut to check buffer is modifiable
 nnoremap <silent> <leader>mod :set modifiable?<cr>
+
