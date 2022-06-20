@@ -572,3 +572,5 @@ nnoremap <silent> <leader>wx <Plug>VimwikiIndex
 
 nnoremap <silent> <leader>pwd :pwd<cr>
 
+" make cursor blinking
+set guicursor=a:blinkon100
