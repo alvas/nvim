@@ -575,7 +575,14 @@ nnoremap <silent> <leader>pwd :pwd<cr>
 " make cursor blinking
 set guicursor=a:blinkon100
 
+" save cwd to z register
 nnoremap <silent> <leader>zd :let @z=getcwd()<cr>
+
+" jump to folder saved in z register
+nnoremap <silent> <leader>dz :cd "z<cr>
+
+" save file folder to y register
 nnoremap <silent> <leader>yd :let @y=expand("%:p:h")<cr>
 
-
+" save jump to file folder
+nnoremap <silent> <leader>dy :cd %:p:h<cr>
