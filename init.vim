@@ -574,3 +574,8 @@ nnoremap <silent> <leader>pwd :pwd<cr>
 
 " make cursor blinking
 set guicursor=a:blinkon100
+
+nnoremap <silent> <leader>gd :let @z=getcwd()<cr>
+nnoremap <silent> <leader>fd :let @z=expand("%:p:h")<cr>
+
+
