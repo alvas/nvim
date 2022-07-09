@@ -576,6 +576,6 @@ nnoremap <silent> <leader>pwd :pwd<cr>
 set guicursor=a:blinkon100
 
 nnoremap <silent> <leader>gd :let @z=getcwd()<cr>
-nnoremap <silent> <leader>fd :let @z=expand("%:p:h")<cr>
+nnoremap <silent> <leader>fd :let @y=expand("%:p:h")<cr>
 
 
