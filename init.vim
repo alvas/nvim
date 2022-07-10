@@ -565,7 +565,10 @@ nnoremap <silent> <leader>ex :!grep <c-r><c-w> "%" > <c-r><c-w>.txt<cr>
 nnoremap <silent> <leader>mod :set modifiable!<cr> <bar> :set modifiable?<cr>
 
 " copy current buffer file name to register *
-nnoremap <silent> <leader>fn :let @*=expand("%")<cr>
+nnoremap <silent> <leader>fn :let @*=expand("%:t")<cr>
+
+" copy full path of current buffer file name to register *
+nnoremap <silent> <leader>ffn :let @*=expand("%")<cr>
 
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
 nnoremap <silent> <leader>wx <Plug>VimwikiIndex
