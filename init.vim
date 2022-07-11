@@ -568,7 +568,7 @@ nnoremap <silent> <leader>mod :set modifiable!<cr> <bar> :set modifiable?<cr>
 nnoremap <silent> <leader>fn :let @*=expand("%:t")<cr>
 
 " copy full path of current buffer file name to register *
-nnoremap <silent> <leader>ffn :let @*=expand("%")<cr>
+nnoremap <silent> <leader>ffn :let @*=expand("%:p")<cr>
 
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
 nnoremap <silent> <leader>wx <Plug>VimwikiIndex
