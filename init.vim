@@ -580,7 +580,8 @@ nnoremap <silent> <leader>fn :let @*=expand("%:t")<cr>
 nnoremap <silent> <leader>ffn :let @*=expand("%:p")<cr>
 
 " renamp vimwiki index shortcut to avoid conflict with vim-windowswap
-nnoremap <silent> <leader>wx <Plug>VimwikiIndex
+" nnoremap <silent> <leader>wx <Plug>VimwikiIndex
+nnoremap <silent> <leader>wx :VimwikiIndex<cr>
 
 nnoremap <silent> <leader>pwd :pwd<cr>
 
