@@ -582,7 +582,7 @@ set guicursor=a:blinkon100
 nnoremap <silent> <leader>zd :let @z=getcwd()<cr>
 
 " jump to folder saved in z register
-nnoremap <silent> <leader>dz :cd "z<cr>
+nnoremap <silent> <leader>dz :cd <c-r>z<cr>
 
 " save file folder to y register
 nnoremap <silent> <leader>yd :let @y=expand("%:p:h")<cr>
