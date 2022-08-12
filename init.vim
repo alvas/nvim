@@ -286,6 +286,12 @@ Plugin 'wesQ3/vim-windowswap'
 " R: replace more than one character, until ECS is pressed
 Plugin 'vim-scripts/drawit'
 
+
+Plugin 'simnalamburt/vim-mundo'
+nnoremap <silent> <leader>ud :MundoToggle<CR>
+set undofile
+set undodir=~/.vim/undo
+
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
