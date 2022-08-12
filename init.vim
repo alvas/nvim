@@ -589,3 +589,9 @@ nnoremap <silent> <leader>yd :let @y=expand("%:p:h")<cr>
 
 " save jump to file folder
 nnoremap <silent> <leader>dy :cd %:p:h<cr>
+
+" shortcut to fold line not match searching pattern
+set foldexpr=getline(v:lnum)!~@/
+nnoremap <silent> <leader>fd :set foldmethod=expr<CR><Bar>zM
+set fml=0
+
