@@ -31,6 +31,9 @@ let tagbar_right=1
 let tagbar_width=32
 let g:tagbar_compact=1
 
+" show ^M
+set ffs=unix
+
 let g:tagbar_type_cpp = {
         \ 'kinds' : [
         \ 'd:macros:1',
