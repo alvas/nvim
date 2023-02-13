@@ -12,6 +12,7 @@ set shiftwidth=4
 set smartindent
 set softtabstop=4
 set ts=4
+setlocal spell
 set spelllang=en_us
 
 
@@ -208,7 +209,8 @@ Plugin 'flazz/vim-colorschemes'
 "Plugin 'garbas/vim-snipmate'
 "Plugin 'gcmt/wildfire.vim'
 Plugin 'godlygeek/tabular'
-"Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'kana/vim-textobj-indent'
@@ -604,4 +606,21 @@ nnoremap <silent> <leader>dy :cd %:p:h<cr>
 set foldexpr=getline(v:lnum)!~@/
 nnoremap <silent> <leader>fd :set foldmethod=expr<CR><Bar>zM
 set fml=0
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:snips_author="alvasli"
+
+" spelling autocorrection
+" jumps to the previous spelling mistakes [s, then picks the 1st suggestion
+" 1z=, and then jumps back `]a. The <c-g>u in the middle make it possible to
+" undo the spelling correction quickly.
+inoremap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
